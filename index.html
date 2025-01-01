@@ -140,6 +140,13 @@
     <button id="next-btn">
         <i class="fas fa-arrow-circle-right"></i>
     </button>
+    <script>
+        // Kiểm tra trạng thái đăng nhập
+        if (localStorage.getItem("isLoggedIn") !== "true") {
+            // Nếu chưa đăng nhập, chuyển hướng về login.html
+            window.location.href = "login.html";
+        }
+    </script>
     <script src="main.js"></script>
 
 </body>

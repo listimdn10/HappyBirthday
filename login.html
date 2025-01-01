@@ -17,7 +17,7 @@
         <div class="form-container sign-in">
             <form id="loginForm">
                 <h1>Sign In</h1>
-                <input type="text" id="username" placeholder="xinh đẹp của ai ấy nhờ?" required>
+                <input type="text" id="username" placeholder="xinh đẹp của ..." required>
                 <input type="password" id="password" placeholder="Password" required>
                 <button type="submit">Done</button>
             </form>
@@ -51,6 +51,8 @@
             // Kiểm tra thông tin đăng nhập
             if (username === VALID_USERNAME && password === VALID_PASSWORD) {
                 alert("eo ôi giỏi thế ạ");
+                // Lưu trạng thái đăng nhập vào localStorage
+                localStorage.setItem("isLoggedIn", "true");
                 // Chuyển hướng tới main.html
                 window.location.href = "index.html";
             } else {
